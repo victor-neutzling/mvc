@@ -1,0 +1,123 @@
+@import '../abstract/variable';
+
+main{
+    
+    display: flex;
+    flex-direction: column;
+    .main-tb{
+       
+        font-family: $font-main;
+        color: $color-second;
+        margin: 0 45px;
+        margin-right: 55px;
+        
+        h3{
+            height: 16px;
+            size: 14px;
+            line-height: 16px;
+            margin-bottom: 4px;
+        }
+        input{
+            padding: 12px;
+            border-radius: 4px;
+            border: 2px solid #AAAAAA;
+            box-sizing: border-box;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        
+    }
+    .email-phone{
+        display:flex;
+        font-family: $font-main;
+        color: $color-second;
+        margin-left: 45px;
+        margin-right: 55px;
+        justify-content: space-between;
+
+        .email{
+            margin-right: 24px;
+            width: 70%;
+            h3{
+                height: 16px;
+                size: 14px;
+                line-height: 16px;
+                margin-bottom: 4px;
+            }
+            input{
+                padding: 12px;
+                border-radius: 4px;
+                border: 2px solid #AAAAAA;
+                box-sizing: border-box;
+                width: 100%;
+            }
+
+        }
+        .phone{
+            box-sizing: border-box;
+            width: 30%;
+            h3{
+                height: 16px;
+                size: 14px;
+                line-height: 16px;
+                margin-bottom: 4px;
+            }
+            input{
+                padding: 12px;
+                border-radius: 4px;
+                border: 2px solid #AAAAAA;
+                box-sizing: border-box;
+                width: 100%;
+            }
+        }
+    }
+    .birthday-title{
+        font-family: $font-main;
+        font-weight: 400;
+        color: $color-second;
+        font-size: 18px;
+        margin-left: 45px;
+        margin-top: 33px;
+        margin-bottom: 14px;
+        line-height: 16px;
+    }
+    .birthday{
+        font-family: $font-main;
+        font-weight: 400;
+        color: $color-second;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 45px;
+        margin-right: 55px;
+        .tb-dates{
+            width: 100%;
+            display: flex;
+            .tb-date{
+                width: 100%;
+                margin-right: 22px;
+                select{
+                    padding: 11px;
+                    width: 100%;
+                }
+            }
+        }
+        
+        .tb-age{
+            
+            input{
+                padding: 11px;
+               
+                width: 101px;
+            }
+        }
+    }
+}
+//if 320px
+@media (max-width: 450px) {
+    .birthday{
+        flex-wrap: wrap;
+        
+    }
+ }

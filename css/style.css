@@ -1,4 +1,5 @@
 header {
+  margin-right: 57px;
   margin-left: 45px;
   margin-top: 56px;
 }
@@ -19,7 +20,6 @@ header .itens {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 57px;
   margin-top: 33px;
   margin-bottom: 33px;
   font-weight: 400;
@@ -39,5 +39,151 @@ header .itens .item:hover {
   -webkit-box-shadow: inset 0px -2px 0px #074ee8;
           box-shadow: inset 0px -2px 0px #074ee8;
   color: #074ee8;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .main-tb {
+  font-family: "Nunito", sans-serif;
+  color: #767676;
+  margin: 0 45px;
+  margin-right: 55px;
+}
+
+main .main-tb h3 {
+  height: 16px;
+  size: 14px;
+  line-height: 16px;
+  margin-bottom: 4px;
+}
+
+main .main-tb input {
+  padding: 12px;
+  border-radius: 4px;
+  border: 2px solid #AAAAAA;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+main .email-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Nunito", sans-serif;
+  color: #767676;
+  margin-left: 45px;
+  margin-right: 55px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .email-phone .email {
+  margin-right: 24px;
+  width: 70%;
+}
+
+main .email-phone .email h3 {
+  height: 16px;
+  size: 14px;
+  line-height: 16px;
+  margin-bottom: 4px;
+}
+
+main .email-phone .email input {
+  padding: 12px;
+  border-radius: 4px;
+  border: 2px solid #AAAAAA;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+
+main .email-phone .phone {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 30%;
+}
+
+main .email-phone .phone h3 {
+  height: 16px;
+  size: 14px;
+  line-height: 16px;
+  margin-bottom: 4px;
+}
+
+main .email-phone .phone input {
+  padding: 12px;
+  border-radius: 4px;
+  border: 2px solid #AAAAAA;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+
+main .birthday-title {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  color: #767676;
+  font-size: 18px;
+  margin-left: 45px;
+  margin-top: 33px;
+  margin-bottom: 14px;
+  line-height: 16px;
+}
+
+main .birthday {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  color: #767676;
+  font-size: 14px;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 45px;
+  margin-right: 55px;
+}
+
+main .birthday .tb-dates {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .birthday .tb-dates .tb-date {
+  width: 100%;
+  margin-right: 22px;
+}
+
+main .birthday .tb-dates .tb-date select {
+  padding: 11px;
+  width: 100%;
+}
+
+main .birthday .tb-age input {
+  padding: 11px;
+  width: 101px;
+}
+
+@media (max-width: 450px) {
+  .birthday {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 /*# sourceMappingURL=style.css.map */

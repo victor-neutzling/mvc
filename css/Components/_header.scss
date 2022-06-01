@@ -1,6 +1,7 @@
 @import '../Abstract/variable';
 
 header{
+    margin-right: 57px;
     margin-left: 45px;
     margin-top: 56px;
     h1{
@@ -16,7 +17,7 @@ header{
         font-family: $font-main;
         list-style: none;
         display: flex;
-        margin-right: 57px;
+        
         margin-top: 33px;
         margin-bottom: 33px;
         font-weight: 400;
