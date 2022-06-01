@@ -1,0 +1,37 @@
+@import '../Abstract/variable';
+
+header{
+    margin-left: 45px;
+    margin-top: 56px;
+    h1{
+        font-family: $font-title;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        width: 755px;
+        height: 24px;
+        color: $color-title;
+    }
+    .itens{
+        font-family: $font-main;
+        list-style: none;
+        display: flex;
+        margin-right: 57px;
+        margin-top: 33px;
+        margin-bottom: 33px;
+        font-weight: 400;
+        text-align: center;
+        
+
+        .item{
+            width: 33.3%;
+            box-shadow: inset 0px -2px 0px #AAAAAA;
+            padding-bottom: 13px;
+            transition: .2s;
+            &:hover{
+                box-shadow: inset 0px -2px 0px $color-primaryBlue;
+                color: $color-primaryBlue;
+            }
+        }
+    }
+}

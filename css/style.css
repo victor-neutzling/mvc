@@ -1,0 +1,43 @@
+header {
+  margin-left: 45px;
+  margin-top: 56px;
+}
+
+header h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  width: 755px;
+  height: 24px;
+  color: #111111;
+}
+
+header .itens {
+  font-family: "Nunito", sans-serif;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 57px;
+  margin-top: 33px;
+  margin-bottom: 33px;
+  font-weight: 400;
+  text-align: center;
+}
+
+header .itens .item {
+  width: 33.3%;
+  -webkit-box-shadow: inset 0px -2px 0px #AAAAAA;
+          box-shadow: inset 0px -2px 0px #AAAAAA;
+  padding-bottom: 13px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+header .itens .item:hover {
+  -webkit-box-shadow: inset 0px -2px 0px #074ee8;
+          box-shadow: inset 0px -2px 0px #074ee8;
+  color: #074ee8;
+}
+/*# sourceMappingURL=style.css.map */
