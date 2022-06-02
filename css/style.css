@@ -38,6 +38,7 @@ header .itens .item:hover {
   -webkit-box-shadow: inset 0px -2px 0px #074ee8;
           box-shadow: inset 0px -2px 0px #074ee8;
   color: #074ee8;
+  cursor: pointer;
 }
 
 main {
