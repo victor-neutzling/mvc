@@ -18,6 +18,7 @@ main{
             margin-bottom: 4px;
         }
         input{
+            font-family: $font-main;
             padding: 12px;
             border-radius: 4px;
             border: 2px solid #AAAAAA;
@@ -45,6 +46,7 @@ main{
                 margin-bottom: 4px;
             }
             input{
+                font-family: $font-main;
                 padding: 12px;
                 border-radius: 4px;
                 border: 2px solid #AAAAAA;
@@ -63,6 +65,7 @@ main{
                 margin-bottom: 4px;
             }
             input{
+                font-family: $font-main;
                 padding: 12px;
                 border-radius: 4px;
                 border: 2px solid #AAAAAA;
@@ -100,6 +103,7 @@ main{
                 width: 100%;
                 //margin-left: 22px;
                 select{
+                    font-family: $font-main;
                     padding: 11px;
                     width: 100%;
                     border-radius: 4px;
@@ -125,6 +129,7 @@ main{
                     background-color: white;
                 }
                 .tb-age{
+                    font-family: $font-main;
                     box-sizing: border-box;
                     padding: 11px;
                     width: 100%;
@@ -169,13 +174,23 @@ main{
             padding: 11px;
             font-size: 16px;
             border-radius: 4px;
-            img{
+            .arrow-icon{
                 margin-left: 12px;
                 width: 8px;
                 height: 13px;
                 margin-top: 2px;
                 margin-right: 3px;
             }
+            .plus-icon{
+                margin-right: 6px;
+            }
+            //transition: .1s;
+        }
+        .next-btn:active{
+            background-color: white;
+            color: $color-primaryBlue;
+            border: 4px solid $color-primaryBlue;
+            padding: 7px;
         }
     }
 }
