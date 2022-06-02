@@ -9,7 +9,6 @@ header h1 {
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
-  width: 755px;
   height: 24px;
   color: #111111;
 }
@@ -140,6 +139,7 @@ main .birthday-title {
   margin-top: 33px;
   margin-bottom: 14px;
   line-height: 16px;
+  width: 50%;
 }
 
 main .birthday {
@@ -151,39 +151,133 @@ main .birthday {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-left: 45px;
+  margin-left: 23px;
   margin-right: 55px;
 }
 
-main .birthday .tb-dates {
+main .birthday .bd-part1 {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .birthday .tb-dates .tb-date {
-  width: 100%;
-  margin-right: 22px;
-}
-
-main .birthday .tb-dates .tb-date select {
-  padding: 11px;
+main .birthday .bd-part1 .tb-date {
+  margin-left: 22px;
   width: 100%;
 }
 
-main .birthday .tb-age input {
+main .birthday .bd-part1 .tb-date select {
   padding: 11px;
-  width: 101px;
+  width: 100%;
+  border-radius: 4px;
+  border: 2px solid #AAAAAA;
+  background-color: white;
+}
+
+main .birthday .bd-part2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+main .birthday .bd-part2 .tb-date {
+  margin-left: 22px;
+  width: 100%;
+}
+
+main .birthday .bd-part2 .tb-date select {
+  padding: 11px;
+  width: 100%;
+  border-radius: 4px;
+  border: 2px solid #AAAAAA;
+  background-color: white;
+}
+
+main .birthday .bd-part2 .tb-date .tb-age {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 11px;
+  width: 100%;
+  border-radius: 4px;
+  border: 2px solid #AAAAAA;
+  background-color: white;
+}
+
+main .terms-of-service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #111111;
+  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 4px;
+  margin-left: 39.5px;
+  margin-top: 45px;
+}
+
+main .terms-of-service h2 {
+  margin-top: 1px;
+  margin-left: 8px;
+}
+
+main .terms-of-service input {
+  border-radius: 2px;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+main .next-btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .next-btn-box .next-btn {
+  font-family: "Nunito", sans-serif;
+  margin-right: 57px;
+  color: white;
+  background-color: #074ee8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 11px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+main .next-btn-box .next-btn img {
+  margin-left: 12px;
+  width: 8px;
+  height: 13px;
+  margin-top: 2px;
+  margin-right: 3px;
 }
 
 @media (max-width: 450px) {
   .birthday {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .email-phone {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .email-phone .email {
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+  .email-phone .phone {
+    margin-top: 33px;
+    width: 100% !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

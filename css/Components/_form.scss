@@ -80,6 +80,7 @@ main{
         margin-top: 33px;
         margin-bottom: 14px;
         line-height: 16px;
+        width: 50%;
     }
     .birthday{
         font-family: $font-main;
@@ -88,36 +89,113 @@ main{
         font-size: 14px;
         line-height: 16px;
         display: flex;
-        justify-content: space-between;
-        margin-left: 45px;
+        
+        margin-left: 23px;
         margin-right: 55px;
-        .tb-dates{
+        .bd-part1{
             width: 100%;
             display: flex;
             .tb-date{
+                margin-left: 22px;
                 width: 100%;
-                margin-right: 22px;
+                //margin-left: 22px;
                 select{
                     padding: 11px;
                     width: 100%;
+                    border-radius: 4px;
+                    border: 2px solid #AAAAAA;
+                    background-color: white;
                 }
             }
         }
         
-        .tb-age{
+        .bd-part2{
+            display: flex;
+            width: 100%;
             
-            input{
-                padding: 11px;
-               
-                width: 101px;
+            .tb-date{
+                margin-left: 22px;
+                width: 100%;
+                //margin-left: 22px;
+                select{
+                    padding: 11px;
+                    width: 100%;
+                    border-radius: 4px;
+                    border: 2px solid #AAAAAA;
+                    background-color: white;
+                }
+                .tb-age{
+                    box-sizing: border-box;
+                    padding: 11px;
+                    width: 100%;
+                    border-radius: 4px;
+                    border: 2px solid #AAAAAA;
+                    background-color: white;
+                }
+            }
+        }
+    }
+    .terms-of-service{
+        display: flex;
+        color: #111111;
+        font-family: $font-main;
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        padding: 4px;
+        margin-left: 39.5px;
+        margin-top: 45px;
+        h2{
+            margin-top: 1px;
+            margin-left: 8px;
+        }
+        input{
+            
+            border-radius: 2px;
+            transform: scale(1.4);
+        }
+    }
+    .next-btn-box{
+        display: flex;
+        justify-content: flex-end;
+        .next-btn{
+            font-family: $font-main;
+            margin-right: 57px;
+            color: white;
+            background-color: $color-primaryBlue;
+            display: flex;
+            padding: 11px;
+            font-size: 16px;
+            border-radius: 4px;
+            img{
+                margin-left: 12px;
+                width: 8px;
+                height: 13px;
+                margin-top: 2px;
+                margin-right: 3px;
             }
         }
     }
 }
-//if 320px
+
 @media (max-width: 450px) {
     .birthday{
         flex-wrap: wrap;
         
+    }
+    .email-phone{
+        flex-wrap: wrap;
+        .email{
+            margin-right: 0 !important;
+            width: 100% !important;
+        }
+
+        .phone{
+            
+            margin-top: 33px;
+            width: 100% !important;
+        }
     }
  }
