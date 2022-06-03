@@ -23,6 +23,7 @@ header .itens {
   margin-bottom: 33px;
   font-weight: 400;
   text-align: center;
+  text-decoration: none;
 }
 
 header .itens .item {
@@ -34,10 +35,26 @@ header .itens .item {
   transition: .2s;
 }
 
+header .itens .item a {
+  text-decoration: none;
+  color: #111111;
+}
+
 header .itens .item:hover {
   -webkit-box-shadow: inset 0px -2px 0px #074ee8;
           box-shadow: inset 0px -2px 0px #074ee8;
   color: #074ee8;
+}
+
+@media (max-width: 450px) {
+  header {
+    margin-right: 20px !important;
+    margin-left: 20px !important;
+  }
+  .itens .item {
+    width: 100% !important;
+    margin-top: 10px;
+  }
 }
 
 main {
@@ -57,6 +74,23 @@ main .main-tb {
   margin-right: 55px;
 }
 
+main .main-tb .tb-with-heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .main-tb .tb-with-heart img {
+  margin: 11px;
+  position: absolute;
+  margin-top: 14px;
+  width: 20px;
+  margin-right: 13px;
+}
+
 main .main-tb h3 {
   height: 16px;
   size: 14px;
@@ -73,6 +107,7 @@ main .main-tb input {
           box-sizing: border-box;
   width: 100%;
   margin-bottom: 30px;
+  padding-right: 41px;
 }
 
 main .email-phone {
@@ -163,6 +198,7 @@ main .birthday .bd-part1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 33px;
 }
 
 main .birthday .bd-part1 .tb-date {
@@ -184,6 +220,7 @@ main .birthday .bd-part2 {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  margin-bottom: 33px;
 }
 
 main .birthday .bd-part2 .tb-date {
@@ -223,7 +260,7 @@ main .terms-of-service {
   line-height: 18px;
   padding: 4px;
   margin-left: 39.5px;
-  margin-top: 45px;
+  margin-bottom: 43px;
 }
 
 main .terms-of-service h2 {
@@ -244,6 +281,8 @@ main .next-btn-box {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  height: 40px;
+  margin-bottom: 43px;
 }
 
 main .next-btn-box .next-btn {
@@ -259,7 +298,28 @@ main .next-btn-box .next-btn {
   border-radius: 4px;
 }
 
+main .next-btn-box .next-btn h1 {
+  margin-top: 1px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+main .next-btn-box .next-btn .blue-text {
+  display: none;
+}
+
 main .next-btn-box .next-btn .arrow-icon {
+  margin-left: 12px;
+  width: 8px;
+  height: 13px;
+  margin-top: 2px;
+  margin-right: 3px;
+}
+
+main .next-btn-box .next-btn .blue-arrow-icon {
+  display: none;
   margin-left: 12px;
   width: 8px;
   height: 13px;
@@ -274,8 +334,110 @@ main .next-btn-box .next-btn .plus-icon {
 main .next-btn-box .next-btn:active {
   background-color: white;
   color: #074ee8;
-  border: 4px solid #074ee8;
-  padding: 7px;
+  border: 2px solid #074ee8;
+  padding: 9px;
+}
+
+main .next-btn-box .next-btn:active .arrow-icon {
+  display: none;
+}
+
+main .next-btn-box .next-btn:active .blue-arrow-icon {
+  display: block;
+}
+
+main .next-btn-box .next-btn:active .blue-text {
+  display: block;
+}
+
+main .next-btn-box .next-btn:active .white-text {
+  display: none;
+}
+
+main .more-btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 40px;
+  margin-bottom: 43px;
+  margin-left: 45px;
+}
+
+main .more-btn-box .trash-btn {
+  margin-left: 3px;
+  margin-top: -3px;
+}
+
+main .more-btn-box .next-btn {
+  font-family: "Nunito", sans-serif;
+  margin-right: 57px;
+  color: white;
+  background-color: #074ee8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 11px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+main .more-btn-box .next-btn h1 {
+  margin-top: 1px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+main .more-btn-box .next-btn .blue-text {
+  display: none;
+}
+
+main .more-btn-box .next-btn .arrow-icon {
+  margin-left: 12px;
+  width: 8px;
+  height: 13px;
+  margin-top: 2px;
+  margin-right: 3px;
+}
+
+main .more-btn-box .next-btn .blue-arrow-icon {
+  display: none;
+  margin-left: 12px;
+  width: 8px;
+  height: 13px;
+  margin-top: 2px;
+  margin-right: 3px;
+}
+
+main .more-btn-box .next-btn .plus-icon {
+  margin-right: 6px;
+}
+
+main .more-btn-box .next-btn:active {
+  background-color: white;
+  color: #074ee8;
+  border: 2px solid #074ee8;
+  padding: 9px;
+}
+
+main .more-btn-box .next-btn:active .arrow-icon {
+  display: none;
+}
+
+main .more-btn-box .next-btn:active .blue-arrow-icon {
+  display: block;
+}
+
+main .more-btn-box .next-btn:active .blue-text {
+  display: block;
+}
+
+main .more-btn-box .next-btn:active .white-text {
+  display: none;
 }
 
 @media (max-width: 450px) {
@@ -294,6 +456,30 @@ main .next-btn-box .next-btn:active {
   .email-phone .phone {
     margin-top: 33px;
     width: 100% !important;
+  }
+  .main-tb {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+  .email-phone {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+  .birthday-title {
+    margin-left: 20px !important;
+  }
+  .birthday {
+    margin-left: -2px !important;
+    margin-right: 20px !important;
+  }
+  .terms-of-service {
+    margin-left: 15px !important;
+  }
+  .next-btn {
+    margin-right: 20px !important;
+  }
+  .trash-btn {
+    margin-left: -20px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
