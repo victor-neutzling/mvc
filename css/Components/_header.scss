@@ -1,9 +1,11 @@
 @import '../Abstract/variable';
 
 header{
+   
     margin-right: 57px;
     margin-left: 45px;
     margin-top: 56px;
+    
     h1{
         font-family: $font-title;
         font-weight: 600;
@@ -14,6 +16,7 @@ header{
         color: $color-title;
     }
     .itens{
+
         font-family: $font-main;
         list-style: none;
         display: flex;
@@ -22,9 +25,13 @@ header{
         margin-bottom: 33px;
         font-weight: 400;
         text-align: center;
+        text-decoration: none;
         
-
         .item{
+            a{
+                text-decoration: none;
+                color: $color-title;
+            }
             width: 33.3%;
             box-shadow: inset 0px -2px 0px #AAAAAA;
             padding-bottom: 13px;
@@ -33,6 +40,20 @@ header{
                 box-shadow: inset 0px -2px 0px $color-primaryBlue;
                 color: $color-primaryBlue;
             }
+        }
+    }
+}
+@media (max-width: 450px) {
+    header{
+        margin-right: 20px!important;
+    margin-left: 20px!important;
+    }
+    .itens{
+        //flex-direction: column;
+        //align-items: center;
+        .item{
+            width: 100% !important;
+            margin-top: 10px;
         }
     }
 }
