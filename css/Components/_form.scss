@@ -11,19 +11,6 @@ main{
         margin: 0 45px;
         margin-right: 55px;
         
-        .tb-with-heart{
-            display: flex;
-            justify-content: flex-end;
-            
-            img{
-                margin:11px;
-                position: absolute;
-                margin-top: 14px;  
-                width: 20px;
-                margin-right: 13px;
-            }
-        }
-        
         h3{
             height: 16px;
             size: 14px;
@@ -38,7 +25,6 @@ main{
             box-sizing: border-box;
             width: 100%;
             margin-bottom: 30px;
-            padding-right: 41px;
         }
         
     }
@@ -112,7 +98,6 @@ main{
         .bd-part1{
             width: 100%;
             display: flex;
-            margin-bottom: 33px;
             .tb-date{
                 margin-left: 22px;
                 width: 100%;
@@ -131,7 +116,6 @@ main{
         .bd-part2{
             display: flex;
             width: 100%;
-            margin-bottom: 33px;
             
             .tb-date{
                 margin-left: 22px;
@@ -167,8 +151,7 @@ main{
         line-height: 18px;
         padding: 4px;
         margin-left: 39.5px;
-        
-        margin-bottom: 43px;
+        margin-top: 45px;
         h2{
             margin-top: 1px;
             margin-left: 8px;
@@ -182,9 +165,6 @@ main{
     .next-btn-box{
         display: flex;
         justify-content: flex-end;
-        height: 40px;
-        margin-bottom: 43px;
-        
         .next-btn{
             font-family: $font-main;
             margin-right: 57px;
@@ -194,27 +174,7 @@ main{
             padding: 11px;
             font-size: 16px;
             border-radius: 4px;
-            h1{
-                margin-top: 1px;
-                user-select: none;
-                -moz-user-select: none;
-                -webkit-user-select: none;
-                -ms-user-select: none;
-            }
-            .blue-text{
-                display: none;
-            }
-            
             .arrow-icon{
-                margin-left: 12px;
-                width: 8px;
-                height: 13px;
-                margin-top: 2px;
-                margin-right: 3px;
-                
-            }
-            .blue-arrow-icon{
-                display: none;
                 margin-left: 12px;
                 width: 8px;
                 height: 13px;
@@ -229,90 +189,8 @@ main{
         .next-btn:active{
             background-color: white;
             color: $color-primaryBlue;
-            border: 2px solid $color-primaryBlue;
-            padding: 9px;
-            .arrow-icon{
-                display:none;
-            }
-            .blue-arrow-icon{
-                display: block;
-            }
-            .blue-text{
-                display: block;
-            }
-            .white-text{
-                display: none;
-            }
-        }
-    }
-    .more-btn-box{
-        display: flex;
-        justify-content: space-between;
-        height: 40px;
-        margin-bottom: 43px;
-        margin-left: 45px;
-        .trash-btn{
-            margin-left: 3px;
-            margin-top: -3px;
-        }
-        .next-btn{
-            font-family: $font-main;
-            margin-right: 57px;
-            color: white;
-            background-color: $color-primaryBlue;
-            display: flex;
-            padding: 11px;
-            font-size: 16px;
-            border-radius: 4px;
-            h1{
-                margin-top: 1px;
-                user-select: none;
-                -moz-user-select: none;
-                -webkit-user-select: none;
-                -ms-user-select: none;
-            }
-            .blue-text{
-                display: none;
-            }
-            
-            .arrow-icon{
-                margin-left: 12px;
-                width: 8px;
-                height: 13px;
-                margin-top: 2px;
-                margin-right: 3px;
-                
-            }
-            .blue-arrow-icon{
-                display: none;
-                margin-left: 12px;
-                width: 8px;
-                height: 13px;
-                margin-top: 2px;
-                margin-right: 3px;
-            }
-            .plus-icon{
-                margin-right: 6px;
-            }
-            //transition: .1s;
-        }
-        .next-btn:active{
-            background-color: white;
-            color: $color-primaryBlue;
-            border: 2px solid $color-primaryBlue;
-            padding: 9px;
-            .arrow-icon{
-                display:none;
-            }
-            .blue-arrow-icon{
-                display: block;
-            }
-            .blue-text{
-                display: block;
-            }
-            .white-text{
-                display: none;
-            }
+            border: 4px solid $color-primaryBlue;
+            padding: 7px;
         }
     }
 }
@@ -335,32 +213,4 @@ main{
             width: 100% !important;
         }
     }
-    .main-tb{
-        margin-left:  20px!important;
-        margin-right: 20px!important;
-    }
-    .email-phone{
-        margin-left: 20px!important;
-        margin-right: 20px!important;
-    }
-    .birthday-title{
-        margin-left: 20px!important;
-    }
-    .birthday{
-        margin-left: -2px!important;
-        margin-right: 20px!important;
-        .bd-part1{
-            
-        }
-    }
-    .terms-of-service{
-        margin-left: 15px!important;
-    }
-    .next-btn{
-        margin-right: 20px!important;
-    }
-    .trash-btn{
-        margin-left: -20px!important;
-    }
-
-}
+ }
