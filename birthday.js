@@ -1,12 +1,11 @@
-//Create references to the dropdown's
+//Creating references to the dropdown's
 const daySelect = document.getElementById("day")
 const monthSelect = document.getElementById('month');
 const yearSelect = document.getElementById("year");
 
 const months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
 
-
-(function favoritesMonths(){
+(function forMonths(){
     for(let i = 0; i < months.length; i++){
         const option = document.createElement('option');
         option.textContent = months[i];
@@ -17,14 +16,16 @@ const months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11'
 
 let previousDay;
 
-function favoritesDays(month){
+function forDays(month){
     while(daySelect.firstChild){
         daySelect.removeChild(daySelect.firstChild);
     }
     //Holds the number of days in the month
     let dayNum;
+
     //Get the current year
     let year = yearSelect.value;
+
         if(month === '01' || month === '03' || 
         month === '05' || month === '07' || month === '08' 
         || month === '10' || month === '12') {
@@ -33,6 +34,7 @@ function favoritesDays(month){
         || month === '09' || month === '11') {
             dayNum = 30;
         }else{
+            //Check for a leap year
             if(new Date(year, 1, 29).getMonth() === 1){
                 dayNum = 29;
             }else{
@@ -58,25 +60,26 @@ function favoritesDays(month){
         }
     }
 }
-function favoritesYears(){
+
+function forYears(){
     //Get the current year
     let year = new Date().getFullYear();
     //Make 121 years an option (in 03/2022)
-    for(let i = 0; i < 121; i++){
+    for(let i = 0; i < 122; i++){
         const option = document.createElement("option");
         option.textContent = year - i;
         yearSelect.appendChild(option);
     }
 }
 
-favoritesDays(monthSelect.value);
-favoritesDays();
+forDays(monthSelect.value);
+forYears();
 
 yearSelect.onchange = function() {
-    favoritesDays(monthSelect.value);
+    forDays(monthSelect.value);
 }
 monthSelect.onchange = function() {
-    favoritesDays(monthSelect.value);
+    forDays(monthSelect.value);
 }
 daySelect.onchange = function() {
     previousDay = daySelect.value;
