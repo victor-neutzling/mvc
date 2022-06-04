@@ -1,9 +1,10 @@
-class CertificateView extends View{
+class ThirdPageView extends View{
     constructor(element){
-        super(element)
+        super(element);
     }
     template(model){
         return `
+        <div class="certificates">
         <div class="main-tb">
             <h3>Certificates</h3>
             <div class="tb-with-heart-box">
@@ -23,9 +24,36 @@ class CertificateView extends View{
                     </div>
                     </div>
         </div>
-    `
-    }
-    update(model){//this should be concatenated inside the div that contains the first certificate input box
-        this._element.innerHTML += this.template(model);
+    </div>
+    <div class="more-btn-box">
+        <div class="next-btn" onclick="formController.addCertificateInput(event)">
+            <img class= "plus-icon"src="./img/Leading Icon.png" alt="">
+            <h1>More</h1>
+            <img class="arrow-icon" src="./img/right-arrow-icon.png" alt="">
+            <img class="blue-arrow-icon" src="img/Vector(6).png" alt="">
+        </div>
+    </div>
+    
+    <div class="main-tb">
+        <h3>Team Name *</h3>
+        <input type="text" name="" id="" placeholder="https://linkedin.com/in/foo-bar-3a0560104/">
+    </div>
+    <div class="main-tb">
+        <h3>Institution</h3>
+        <input type="text" name="" id="" placeholder="Universidade Federal da Paraíba">
+    </div>
+    <div class="main-tb">
+        <h3>Graduation *</h3>
+        <input type="text" name="" id="" placeholder="Ciências da Computação">
+    </div>
+    <div class="next-btn-box">
+        <div class="next-btn">
+            <h1 class="white-text">Next</h1>
+            <h1 class="blue-text">Next</h1>
+            <img class="arrow-icon"src="./img/right-arrow-icon.png" alt="">
+            <img class="blue-arrow-icon" src="img/Vector(6).png" alt="">
+        </div>
+    </div>
+        `
     }
 }

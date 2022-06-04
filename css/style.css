@@ -74,21 +74,35 @@ main .main-tb {
   margin-right: 55px;
 }
 
-main .main-tb .tb-with-heart {
+main .main-tb .tb-with-heart-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .main-tb .tb-with-heart-box .tb-with-heart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  width: 100%;
 }
 
-main .main-tb .tb-with-heart img {
+main .main-tb .tb-with-heart-box .tb-with-heart img {
   margin: 11px;
   position: absolute;
   margin-top: 14px;
   width: 20px;
   margin-right: 13px;
+}
+
+main .main-tb .tb-with-heart-box .trash-btn {
+  padding: 10px;
 }
 
 main .main-tb h3 {
@@ -108,6 +122,7 @@ main .main-tb input {
   width: 100%;
   margin-bottom: 30px;
   padding-right: 41px;
+  cursor: pointer;
 }
 
 main .email-phone {
@@ -136,6 +151,7 @@ main .email-phone .email h3 {
 }
 
 main .email-phone .email input {
+  margin-top: 4px;
   font-family: "Nunito", sans-serif;
   padding: 12px;
   border-radius: 4px;
@@ -143,6 +159,7 @@ main .email-phone .email input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
+  cursor: pointer;
 }
 
 main .email-phone .phone {
@@ -159,6 +176,7 @@ main .email-phone .phone h3 {
 }
 
 main .email-phone .phone input {
+  margin-top: 4px;
   font-family: "Nunito", sans-serif;
   padding: 12px;
   border-radius: 4px;
@@ -166,6 +184,7 @@ main .email-phone .phone input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
+  cursor: pointer;
 }
 
 main .birthday-title {
@@ -207,12 +226,14 @@ main .birthday .bd-part1 .tb-date {
 }
 
 main .birthday .bd-part1 .tb-date select {
+  margin-top: 4px;
   font-family: "Nunito", sans-serif;
   padding: 11px;
   width: 100%;
   border-radius: 4px;
   border: 2px solid #AAAAAA;
   background-color: white;
+  cursor: pointer;
 }
 
 main .birthday .bd-part2 {
@@ -229,6 +250,7 @@ main .birthday .bd-part2 .tb-date {
 }
 
 main .birthday .bd-part2 .tb-date select {
+  margin-top: 4px;
   padding: 11px;
   width: 100%;
   border-radius: 4px;
@@ -237,6 +259,7 @@ main .birthday .bd-part2 .tb-date select {
 }
 
 main .birthday .bd-part2 .tb-date .tb-age {
+  margin-top: 4px;
   font-family: "Nunito", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -245,6 +268,7 @@ main .birthday .bd-part2 .tb-date .tb-age {
   border-radius: 4px;
   border: 2px solid #AAAAAA;
   background-color: white;
+  cursor: pointer;
 }
 
 main .terms-of-service {
@@ -266,12 +290,36 @@ main .terms-of-service {
 main .terms-of-service h2 {
   margin-top: 1px;
   margin-left: 8px;
+  text-shadow: 1px 5px 7px #AAAAAA;
 }
 
 main .terms-of-service input {
+  cursor: pointer;
   border-radius: 2px;
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
+}
+
+main .messages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: -20px;
+  margin-left: 45px;
+  font-family: "Nunito", sans-serif;
+  color: red;
+  margin-bottom: 10px;
+}
+
+main .messages #message1 {
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+main .messages p {
+  text-shadow: 1px 5px 7px #aaaaaa;
 }
 
 main .next-btn-box {
@@ -286,6 +334,7 @@ main .next-btn-box {
 }
 
 main .next-btn-box .next-btn {
+  cursor: pointer;
   font-family: "Nunito", sans-serif;
   margin-right: 57px;
   color: white;
@@ -367,8 +416,28 @@ main .more-btn-box {
 }
 
 main .more-btn-box .trash-btn {
-  margin-left: 3px;
-  margin-top: -3px;
+  background-color: #074ee8;
+  padding: 7px;
+  border-radius: 4px;
+}
+
+main .more-btn-box .trash-btn .trash-icon-blue {
+  display: none;
+}
+
+main .more-btn-box .trash-btn:active {
+  background-color: white;
+  color: #074ee8;
+  border: 2px solid #074ee8;
+  padding: 5px !important;
+}
+
+main .more-btn-box .trash-btn:active .trash-icon {
+  display: none;
+}
+
+main .more-btn-box .trash-btn:active .trash-icon-blue {
+  display: block;
 }
 
 main .more-btn-box .next-btn {
@@ -478,8 +547,11 @@ main .more-btn-box .next-btn:active .white-text {
   .next-btn {
     margin-right: 20px !important;
   }
-  .trash-btn {
-    margin-left: -20px !important;
+  .messages {
+    margin-left: 20px !important;
+  }
+  .more-btn-box {
+    margin-left: 20px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

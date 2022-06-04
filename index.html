@@ -10,27 +10,93 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <link rel="stylesheet" href="css/style.css">
+    
     <title>Team Sign Up</title>
 </head>
 
 <body>
   <header>
-    <h1>Team Sign Up</h1>
+    <h1 onclick="formController.addDate();">Team Sign Up</h1>
     
       <div class="itens">
-          <li class="item">
-            <a href="/#">Basic</a>
+          <li class="item" id="item1" onclick="formController.gotoFirstPage()">
+            <a>Basic</a>
           </li>
-          <li class="item">
-            <a  href="/#SecondTab">Social</a>
+          <li class="item" id="item2" onclick="formController.gotoSecondPage()">
+            <a>Social</a>
           </li>
-          <li class="item">
-            <a  href="/#ThirdTab">Certificates</a>
+          <li class="item" id="item3" onclick="formController.gotoThirdPage()">
+            <a>Certificates</a>
           </li>
       </div>
   </header>
 
 <main id="root">
+  <div class="main-tb">
+    
+    <h3>Full name *</h3>
+    <input type="text" name="" id="tb-name"placeholder="Foo Bar" onkeypress="style.backgroundColor = 'white'">
+</div>
+
+<div class="main-tb">
+    <h3>Nickname</h3>
+    <input type="text" name="" id="tb-nickname" placeholder="Juanito" onkeypress="style.backgroundColor = 'white'">
+</div>
+
+<div class="email-phone">
+    <div class="email">
+        <h3>Email *</h3>
+        <input type="text" name="" id="tb-email" placeholder="foo@bar.com"onkeypress="style.backgroundColor = 'white'">   
+    </div>
+
+    <div class="phone">
+        <h3>Phone</h3>
+        <input type="text" name="" id="tb-phone" placeholder="(83)00000-0000" onkeypress="style.backgroundColor = 'white'">
+    </div>
+</div>
+
+<h2 class="birthday-title">Birthday *</h2>
+
+<section class="birthday">
+    <div class="bd-part1">
+        <div class="tb-date">
+            <h2>Day</h2>
+             <select name="day" id="day"></select> 
+         </div>
+         
+         <div class="tb-date">
+             <h2>Month</h2>
+             <select name="month" id="month" onchange="DateHelper.addDays();DateHelper.checkLeapYear()"></select>
+         </div>
+    </div>
+    
+    <div class="bd-part2">
+        <div class="tb-date">
+            <h2>Year</h2>
+            <select name="year" id="year" onchange="DateHelper.checkLeapYear()"></select>
+        </div>
+        <div class="tb-date">
+            <h2>Age</h2>
+            <input class="tb-age" type="text" name="" id="">
+        </div>
+    </div> 
+</section> 
+<div class="terms-of-service">
+    <input type="checkbox" name="cb-terms" id="">
+    <h2>I accept the terms and privacy</h2>
+</div>
+<div class="messages">
+  <div id="message1"></div>
+  <div id="message2"></div>
+</div>
+<div class="next-btn-box" onclick="formController.gotoSecondPage()">
+  <div class="next-btn">
+          <h1>Next</h1>
+          <img class="arrow-icon" src="./img/right-arrow-icon.png" alt="">
+          <img class="blue-arrow-icon" src="img/Vector(6).png" alt="">
+      </div>
+      
+  </div>
 </main>
 
 <script src="./js/app/views/View.js"></script>
@@ -38,9 +104,17 @@
 <script src="./js/app/views/CertificateView.js"></script>
 <script src="./js/app/views/MessageView.js"></script>
 <script src="./js/app/models/Message.js"></script>
-<script src="index.js" type="module"></script>
+<!--<script src="index.js" type="module"></script>-->
+<script src="./js/app/helpers/ValidationHelper.js"></script>
+<script src="js/app/views/SecondPageView.js"></script>
+<script src="js/app/views/ThirdPageView.js"></script>
+<script src="js/app/views/FirstPageView.js"></script>
+<script src="js/app/helpers/DateHelper.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 <script>
   let formController = new FormController();
+
 </script>
 </body>
 

@@ -11,16 +11,24 @@ main{
         margin: 0 45px;
         margin-right: 55px;
         
-        .tb-with-heart{
+        .tb-with-heart-box{
             display: flex;
-            justify-content: flex-end;
-            
-            img{
-                margin:11px;
-                position: absolute;
-                margin-top: 14px;  
-                width: 20px;
-                margin-right: 13px;
+            justify-content: space-between;
+            .tb-with-heart{
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                
+                img{
+                    margin:11px;
+                    position: absolute;
+                    margin-top: 14px;  
+                    width: 20px;
+                    margin-right: 13px;
+                }
+            }
+            .trash-btn{
+                padding: 10px;
             }
         }
         
@@ -39,6 +47,7 @@ main{
             width: 100%;
             margin-bottom: 30px;
             padding-right: 41px;
+            cursor: pointer;
         }
         
     }
@@ -60,12 +69,14 @@ main{
                 margin-bottom: 4px;
             }
             input{
+                margin-top: 4px;
                 font-family: $font-main;
                 padding: 12px;
                 border-radius: 4px;
                 border: 2px solid #AAAAAA;
                 box-sizing: border-box;
                 width: 100%;
+                cursor: pointer;
             }
 
         }
@@ -79,12 +90,14 @@ main{
                 margin-bottom: 4px;
             }
             input{
+                margin-top: 4px;
                 font-family: $font-main;
                 padding: 12px;
                 border-radius: 4px;
                 border: 2px solid #AAAAAA;
                 box-sizing: border-box;
                 width: 100%;
+                cursor: pointer;
             }
         }
     }
@@ -118,12 +131,14 @@ main{
                 width: 100%;
                 //margin-left: 22px;
                 select{
+                    margin-top: 4px;
                     font-family: $font-main;
                     padding: 11px;
                     width: 100%;
                     border-radius: 4px;
                     border: 2px solid #AAAAAA;
                     background-color: white;
+                    cursor: pointer;
                 }
             }
         }
@@ -138,6 +153,7 @@ main{
                 width: 100%;
                 //margin-left: 22px;
                 select{
+                    margin-top: 4px;
                     padding: 11px;
                     width: 100%;
                     border-radius: 4px;
@@ -145,6 +161,7 @@ main{
                     background-color: white;
                 }
                 .tb-age{
+                    margin-top: 4px;
                     font-family: $font-main;
                     box-sizing: border-box;
                     padding: 11px;
@@ -152,6 +169,7 @@ main{
                     border-radius: 4px;
                     border: 2px solid #AAAAAA;
                     background-color: white;
+                    cursor: pointer;
                 }
             }
         }
@@ -172,12 +190,35 @@ main{
         h2{
             margin-top: 1px;
             margin-left: 8px;
+            text-shadow: 1px 5px 7px #AAAAAA;
         }
         input{
-            
+            cursor: pointer;
             border-radius: 2px;
             transform: scale(1.4);
         }
+    }
+    .messages{
+        display: flex;
+        flex-wrap: wrap;
+        //flex-direction: column;
+        margin-top: -20px;
+        margin-left: 45px;
+        font-family: $font-main;
+        color: red;
+        margin-bottom: 10px;
+        //justify-content: space-evenly;
+        #message1{
+            margin-bottom: 5px;
+            margin-right: 5px;
+        }
+        p{
+            
+        text-shadow: 1px 5px 7px #aaaaaa;
+
+
+        }
+        
     }
     .next-btn-box{
         display: flex;
@@ -186,6 +227,7 @@ main{
         margin-bottom: 43px;
         
         .next-btn{
+            cursor: pointer;
             font-family: $font-main;
             margin-right: 57px;
             color: white;
@@ -252,8 +294,25 @@ main{
         margin-bottom: 43px;
         margin-left: 45px;
         .trash-btn{
-            margin-left: 3px;
-            margin-top: -3px;
+            background-color: $color-primaryBlue;
+            padding: 7px ;
+            border-radius: 4px;
+
+            .trash-icon-blue{
+                display: none;
+            }
+            &:active{
+                background-color: white;
+                color: $color-primaryBlue;
+                border: 2px solid $color-primaryBlue;
+                padding: 5px!important;
+                .trash-icon{
+                    display: none;
+                }
+                .trash-icon-blue{
+                    display: block;
+                }
+            }
         }
         .next-btn{
             font-family: $font-main;
@@ -355,12 +414,19 @@ main{
     }
     .terms-of-service{
         margin-left: 15px!important;
+        
     }
     .next-btn{
         margin-right: 20px!important;
     }
     .trash-btn{
-        margin-left: -20px!important;
+        //margin-left: -20px!important;
     }
+    .messages{
+        margin-left: 20px!important;
 
+    }
+    .more-btn-box{
+        margin-left: 20px!important;
+    }
 }
