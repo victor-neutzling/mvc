@@ -15,8 +15,8 @@ class FormController{
         this._monthSelector = document.querySelector('#month');
         DateHelper.addDate();
         this._pageIndex = 1;
-        this._emptyFieldMessage = new Message('The fields marked as * are mandatory.');
-        this._wrongInfoMessage = new Message('Check that the fields are filled in correctly.')
+        this._emptyFieldMessage = new Message('The fields marked as * are mandatory. ');
+        this._wrongInfoMessage = new Message('Check that the fields are filled in correctly. ')
 
         let headerIcon = document.querySelector("#item1")
         headerIcon.style.boxShadow = 'inset 0px -2px 0px #074ee8';
@@ -187,28 +187,52 @@ class FormController{
                     
                     m2.update(this._emptyFieldMessage)
                 }
+                else{
+                    let m3 = new Message('')
+                    let m2 = new MessageView(document.querySelector('#message2'))
+                    m2.update(m3)
+                }
+    
                 return;
+            }else{
+                let m3 = new Message('')
+                let m2 = new MessageView(document.querySelector('#message1'))
+                m2.update(m3)
             }
+
             if(areFieldsEmpty){
                 let m2 = new MessageView(document.querySelector('#message2'))
                 
                 m2.update(this._emptyFieldMessage)
                 return;
+            }else{
+                let m3 = new Message('')
+                let m2 = new MessageView(document.querySelector('#message2'))
+                m2.update(m3)
             }
+
             if(!areTermsChecked){
                 let m3 = new Message('You must accept the terms of service before moving forward.')
                 let m2 = new MessageView(document.querySelector('#message3'))
                 m2.update(m3)
                 return;
+                
+            }else{
+                let m3 = new Message('')
+                let m2 = new MessageView(document.querySelector('#message3'))
+                m2.update(m3)
             }
 
-            if(document.querySelector('#tb-nickname').value.length > 20||document.querySelector('#tb-nickname').value.length < 5){
+            if(document.querySelector('#tb-nickname').value.length > 20||document.querySelector('#tb-nickname').value.length < 3){
+                if(!document.querySelector('#tb-nickname').value == ''){
+                    
+                
                 let m2 = new MessageView(document.querySelector('#message2'))
-                let message = new Message('The nickname field should have between 5 and 20 characters and should not have any special characters.');
+                let message = new Message('The nickname field should have between 3 and 20 characters and should not have any special characters.');
                 m2.update(message)
-                return;
+                return;}
             }
-            
+           
             
         }
         if(this._pageIndex == 1){
@@ -396,6 +420,10 @@ class FormController{
         if(!ValidationHelper.isUrlValid(document.querySelector('#tb-team-name').value)){
             document.querySelector('#tb-team-name').style.backgroundColor = '#fcdde0';
             hasValidationFailed = true
+            if(document.querySelector('#tb-team-name').value == ''){
+                hasValidationFailed = false;
+                hasEmptyfields = true;
+            }
         }
         if(!ValidationHelper.isNameValid(document.querySelector('#tb-institution').value)){
             document.querySelector('#tb-institution').style.backgroundColor = '#fcdde0';
@@ -404,6 +432,10 @@ class FormController{
         if(!ValidationHelper.isNameValid(document.querySelector('#tb-graduation').value)){
             document.querySelector('#tb-graduation').style.backgroundColor = '#fcdde0';
             hasValidationFailed = true
+            if(document.querySelector('#tb-graduation').value == ''){
+                hasValidationFailed = false;
+                hasEmptyfields = true;
+            }
         }
         if(document.querySelector('#tb-team-name').value == ''){
             document.querySelector('#tb-team-name').style.backgroundColor = '#fcdde0';
@@ -419,6 +451,9 @@ class FormController{
             let MsgView = new MessageView(document.querySelector('#message1'))
             MsgView.update(this._wrongInfoMessage);
             return;
+        }else{
+            let MsgView = new MessageView(document.querySelector('#message1'))
+            MsgView.update(new Message(''));
         }
         if(hasEmptyfields){
             console.log("entrou aqui")
@@ -426,6 +461,10 @@ class FormController{
             let MsgView = new MessageView(document.querySelector('#message2'))
             MsgView.update(this._emptyFieldMessage);
             return;
+        }
+        else{
+            let MsgView = new MessageView(document.querySelector('#message2'))
+            MsgView.update(new Message(''));
         }
         let index2 = 0
         this._inputCertificate.forEach(element => {
@@ -440,7 +479,11 @@ class FormController{
         localStorage.setItem('teamName',document.querySelector('#tb-team-name').value)
         localStorage.setItem('institution',document.querySelector('#tb-institution').value)
         localStorage.setItem('graduation',document.querySelector('#tb-graduation').value)
-        this._tableView.update();
+        if(confirm('make sure you added your infomation correctly before proceeding')){
+            this._tableView.update();
+        }else{
+            return;
+        }
         this._rowView = new RowView(document.querySelector('.table-body'));
         
         let person = new Person(localStorage.getItem('name'),localStorage.getItem('nickname'),localStorage.getItem('email'),localStorage.getItem('phone'),localStorage.getItem('age'),localStorage.getItem('linkedin'),localStorage.getItem('github'),localStorage.getItem('certificate1'),localStorage.getItem('certificate2'),localStorage.getItem('certificate3'),localStorage.getItem('certificate4'),localStorage.getItem('certificate5'),localStorage.getItem('teamName'),localStorage.getItem('institution'),localStorage.getItem('graduation'));

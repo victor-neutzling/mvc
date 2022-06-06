@@ -7,6 +7,7 @@ class Person{
         this._age = age;
         this._linkedin = linkedin;
         this._github = github;
+        
         this._certificate1 = certificate1;
         this._certificate2 = certificate2;
         this._certificate3 = certificate3;

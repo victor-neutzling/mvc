@@ -10,7 +10,7 @@ class CertificateView extends View{
             
             <div class="tb-with-heart-box" id="tb${this._id}">
                 <div class="tb-with-heart">
-                    <input type="text" name="" id="textbox${this._id}" placeholder="https://linkedin.com/in/foo-bar-3a0560104/" onkeypress="style.backgroundColor = 'white'">
+                    <input type="text" name="" value="\"" id="textbox${this._id}" placeholder="https://linkedin.com/in/foo-bar-3a0560104/" onkeypress="style.backgroundColor = 'white'">
                     <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="formController.favourite(event, ${this._id})" class="svg1">
                     <g filter="url(#filter0_d_3297_1820)">
                     <path d="M15.6301 2.4574C15.247 2.07416 14.7922 1.77014 14.2916 1.56272C13.791 1.3553 13.2545 1.24854 12.7126 1.24854C12.1707 1.24854 11.6342 1.3553 11.1336 1.56272C10.633 1.77014 10.1782 2.07416 9.79509 2.4574L9.00009 3.2524L8.20509 2.4574C7.43132 1.68364 6.38186 1.24894 5.28759 1.24894C4.19331 1.24894 3.14386 1.68364 2.37009 2.4574C1.59632 3.23117 1.16162 4.28063 1.16162 5.3749C1.16162 6.46918 1.59632 7.51864 2.37009 8.2924L3.16509 9.0874L9.00009 14.9224L14.8351 9.0874L15.6301 8.2924C16.0133 7.90934 16.3174 7.45451 16.5248 6.95392C16.7322 6.45333 16.839 5.91677 16.839 5.3749C16.839 4.83304 16.7322 4.29648 16.5248 3.79589C16.3174 3.29529 16.0133 2.84047 15.6301 2.4574V2.4574Z" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"/>

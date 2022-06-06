@@ -4,6 +4,17 @@ class RowView extends View{
         console.log(element)
     }
     template(model){
+        if(model[7] == null){
+            model[7] = '';
+        }if(model[8] == null){
+            model[8] = '';
+        }if(model[9] == null){
+            model[9] = '';
+        }if(model[10] == null){
+            model[10] = '';
+        }if(model[11] == null){
+            model[11] = '';
+        }
         return`
         <tr>
         <td>${model[0]}</td>

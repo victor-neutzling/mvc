@@ -25,6 +25,9 @@ class AgeHelper{
                 bd = currentDate - year.value
             }
         }
+        if(year.value== currentDate){
+            bd = 0;
+        }
         document.querySelector('#tb-age').value = bd;
 
     }
