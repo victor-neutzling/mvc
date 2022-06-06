@@ -128,12 +128,16 @@ class FormController{
         document.querySelector('#tb-email').value = localStorage.getItem('email');
         document.querySelector('#tb-phone').value = localStorage.getItem('phone');
         document.querySelector('#tb-age').value = localStorage.getItem('age');
+        document.querySelector('#day').value = localStorage.getItem('day');
+        document.querySelector('#month').value = localStorage.getItem('month');
+        document.querySelector('#year').value = localStorage.getItem('year');
         
     }
     gotoSecondPage(){
         if(this._pageIndex == 1){
             let validationFailed = false;
             let areFieldsEmpty = false;
+            let areTermsChecked = false;
             if(!ValidationHelper.isNameValid(document.querySelector('#tb-name').value) ){
                 document.querySelector('#tb-name').style.backgroundColor = '#fcdde0';
                 document.querySelector('#tb-name').style.borderColor = '';
@@ -171,6 +175,9 @@ class FormController{
                 document.querySelector('#tb-phone').style.OutlineColor = 'blue';
                 validationFailed = true;
             }
+            if(document.querySelector('#cb-terms').checked){
+                areTermsChecked = true;
+            }
             if(validationFailed){
                 
                 let m1 = new MessageView(document.querySelector('#message1'))
@@ -186,6 +193,12 @@ class FormController{
                 let m2 = new MessageView(document.querySelector('#message2'))
                 
                 m2.update(this._emptyFieldMessage)
+                return;
+            }
+            if(!areTermsChecked){
+                let m3 = new Message('You must accept the terms of service before moving forward.')
+                let m2 = new MessageView(document.querySelector('#message3'))
+                m2.update(m3)
                 return;
             }
 
@@ -204,6 +217,9 @@ class FormController{
             localStorage.setItem('email',document.querySelector('#tb-email').value)
             localStorage.setItem('phone',document.querySelector('#tb-phone').value)
             localStorage.setItem('age',document.querySelector('#tb-age').value)
+            localStorage.setItem('day',document.querySelector('#day').value)
+            localStorage.setItem('month',document.querySelector('#month').value)
+            localStorage.setItem('year',document.querySelector('#year').value)
         }
         if(this._pageIndex == 3){
             let index2 = 0
