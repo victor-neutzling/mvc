@@ -12,7 +12,7 @@ class ValidationHelper{
         return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email);
     }
     static isPhoneValid(phone){
-        return /^[0-9]*$/.test(phone);
+        return /[0-9 ]+/.test(phone);
     }
     //age is a whole other thing
     static isUrlValid(url){

@@ -61,23 +61,23 @@
     <div class="bd-part1">
         <div class="tb-date">
             <h2>Day</h2>
-             <select name="day" id="day"></select> 
+             <select name="day" id="day" onchange="AgeHelper.getBirthday();"></select> 
          </div>
          
          <div class="tb-date">
              <h2>Month</h2>
-             <select name="month" id="month" onchange="DateHelper.addDays();DateHelper.checkLeapYear()"></select>
+             <select name="month" id="month" onchange="DateHelper.addDays();DateHelper.checkLeapYear();AgeHelper.getBirthday()"></select>
          </div>
     </div>
     
     <div class="bd-part2">
         <div class="tb-date">
             <h2>Year</h2>
-            <select name="year" id="year" onchange="DateHelper.checkLeapYear()"></select>
+            <select name="year" id="year" onchange="DateHelper.checkLeapYear();AgeHelper.getBirthday()"></select>
         </div>
         <div class="tb-date">
             <h2>Age</h2>
-            <input class="tb-age" type="text" name="" id="">
+            <input class="tb-age" type="text" name="" id="tb-age" disabled>
         </div>
     </div> 
 </section> 
@@ -104,17 +104,23 @@
 <script src="./js/app/views/CertificateView.js"></script>
 <script src="./js/app/views/MessageView.js"></script>
 <script src="./js/app/models/Message.js"></script>
+<script src="./js/app/models/Person.js"></script>
 <!--<script src="index.js" type="module"></script>-->
 <script src="./js/app/helpers/ValidationHelper.js"></script>
 <script src="js/app/views/SecondPageView.js"></script>
 <script src="js/app/views/ThirdPageView.js"></script>
 <script src="js/app/views/FirstPageView.js"></script>
 <script src="js/app/helpers/DateHelper.js"></script>
+<script src="js/app/views/TableView.js"></script>
+<script src="js/app/views/RowView.js"></script>
+<script src="js/app/helpers/AgeHelper.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script type="text/javascript">
+$("#tb-phone").mask("(00) 00000-0000");
+</script>
 <script>
   let formController = new FormController();
-
 </script>
 </body>
 

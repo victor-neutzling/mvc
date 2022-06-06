@@ -33,23 +33,23 @@ class FirstPageView extends View{
         <div class="bd-part1">
             <div class="tb-date">
                 <h2>Day</h2>
-                 <select name="day" id="day"></select> 
+                 <select name="day" id="day" onchange="AgeHelper.getBirthday()"></select> 
              </div>
              
              <div class="tb-date">
                  <h2>Month</h2>
-                 <select name="month" id="month" onchange="DateHelper.addDays();DateHelper.checkLeapYear()"></select>
+                 <select name="month" id="month" onchange="DateHelper.addDays();DateHelper.checkLeapYear();AgeHelper.getBirthday()"></select>
              </div>
         </div>
         
         <div class="bd-part2">
             <div class="tb-date">
                 <h2>Year</h2>
-                <select name="year" id="year" onchange="DateHelper.checkLeapYear()"></select>
+                <select name="year" id="year" onchange="DateHelper.checkLeapYear();AgeHelper.getBirthday()"></select>
             </div>
             <div class="tb-date">
                 <h2>Age</h2>
-                <input class="tb-age" type="text" name="" id="">
+                <input class="tb-age" type="text" name="" id="tb-age" disabled>
             </div>
         </div> 
     </section> 

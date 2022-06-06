@@ -10,21 +10,29 @@ main{
         color: $color-second;
         margin: 0 45px;
         margin-right: 55px;
-        
+        transition: 1s;
         .tb-with-heart-box{
             display: flex;
+            transition: 1s;
             justify-content: space-between;
             .tb-with-heart{
                 display: flex;
                 justify-content: flex-end;
                 width: 100%;
-                
-                img{
+                transition: 1s;
+                svg{
                     margin:11px;
                     position: absolute;
                     margin-top: 14px;  
                     width: 20px;
                     margin-right: 13px;
+                    cursor: pointer;
+                }
+                .svg1{
+                    display: block;
+                }
+                .svg2{
+                    display: none;
                 }
             }
             .trash-btn{
@@ -199,11 +207,15 @@ main{
         }
     }
     .messages{
+        white-space: wrap;
+        //width: 100%;
         display: flex;
         flex-wrap: wrap;
+        justify-items: flex-start;
         //flex-direction: column;
         margin-top: -20px;
         margin-left: 45px;
+        margin-right: 45px;
         font-family: $font-main;
         color: red;
         margin-bottom: 10px;
@@ -219,6 +231,10 @@ main{
 
         }
         
+    }
+    .div-btn-box2{
+        margin-top: 312px;
+
     }
     .next-btn-box{
         display: flex;
@@ -252,7 +268,7 @@ main{
                 width: 8px;
                 height: 13px;
                 margin-top: 2px;
-                margin-right: 3px;
+                margin-left: 6px;
                 
             }
             .blue-arrow-icon{
@@ -261,10 +277,28 @@ main{
                 width: 8px;
                 height: 13px;
                 margin-top: 2px;
-                margin-right: 3px;
+                margin-left: 6px;
             }
-            .plus-icon{
-                margin-right: 6px;
+            .arrow-icon2{
+                //margin-left: 12px;
+                width: 8px;
+                //height: 13px;
+                margin-top: 2px;
+                margin-right: 15px;
+                margin-bottom: 4px;
+                
+            }
+            .blue-arrow-icon2{
+                display: none;
+                //margin-left: 12px;
+                width: 8px;
+                //height: 13px;
+                margin-top: 2px;
+                margin-right: 15px;
+                margin-bottom: 4px;
+            }
+            .plus-icon2{
+                margin-left: 6px;
             }
             //transition: .1s;
         }
@@ -279,6 +313,12 @@ main{
             .blue-arrow-icon{
                 display: block;
             }
+            .arrow-icon2{
+                display:none;
+            }
+            .blue-arrow-icon2{
+                display: block;
+            }
             .blue-text{
                 display: block;
             }
@@ -289,7 +329,7 @@ main{
     }
     .more-btn-box{
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         height: 40px;
         margin-bottom: 43px;
         margin-left: 45px;
@@ -374,6 +414,30 @@ main{
             }
         }
     }
+    .table-box{
+        display: flex;
+        justify-content: space-evenly;
+        
+        overflow: scroll;
+        margin-right: 55px;
+            margin-left: 45px;
+            margin-bottom: 35px;
+        table{
+            width:100%;
+            border: 1px $color-second solid;
+            
+            font-family: $font-main;
+           
+            td{
+                
+                padding: 5px;
+                border: 1px $color-second solid
+            }
+            .primeira-td{
+                background-color: lightgrey;
+            }
+        }
+    }
 }
 
 @media (max-width: 450px) {
@@ -429,4 +493,5 @@ main{
     .more-btn-box{
         margin-left: 20px!important;
     }
+    
 }

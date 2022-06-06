@@ -72,12 +72,16 @@ main .main-tb {
   color: #767676;
   margin: 0 45px;
   margin-right: 55px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 main .main-tb .tb-with-heart-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 1s;
+  transition: 1s;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -91,14 +95,25 @@ main .main-tb .tb-with-heart-box .tb-with-heart {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-main .main-tb .tb-with-heart-box .tb-with-heart img {
+main .main-tb .tb-with-heart-box .tb-with-heart svg {
   margin: 11px;
   position: absolute;
   margin-top: 14px;
   width: 20px;
   margin-right: 13px;
+  cursor: pointer;
+}
+
+main .main-tb .tb-with-heart-box .tb-with-heart .svg1 {
+  display: block;
+}
+
+main .main-tb .tb-with-heart-box .tb-with-heart .svg2 {
+  display: none;
 }
 
 main .main-tb .tb-with-heart-box .trash-btn {
@@ -301,13 +316,16 @@ main .terms-of-service input {
 }
 
 main .messages {
+  white-space: wrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  justify-items: flex-start;
   margin-top: -20px;
   margin-left: 45px;
+  margin-right: 45px;
   font-family: "Nunito", sans-serif;
   color: red;
   margin-bottom: 10px;
@@ -320,6 +338,10 @@ main .messages #message1 {
 
 main .messages p {
   text-shadow: 1px 5px 7px #aaaaaa;
+}
+
+main .div-btn-box2 {
+  margin-top: 312px;
 }
 
 main .next-btn-box {
@@ -364,7 +386,7 @@ main .next-btn-box .next-btn .arrow-icon {
   width: 8px;
   height: 13px;
   margin-top: 2px;
-  margin-right: 3px;
+  margin-left: 6px;
 }
 
 main .next-btn-box .next-btn .blue-arrow-icon {
@@ -373,11 +395,26 @@ main .next-btn-box .next-btn .blue-arrow-icon {
   width: 8px;
   height: 13px;
   margin-top: 2px;
-  margin-right: 3px;
+  margin-left: 6px;
 }
 
-main .next-btn-box .next-btn .plus-icon {
-  margin-right: 6px;
+main .next-btn-box .next-btn .arrow-icon2 {
+  width: 8px;
+  margin-top: 2px;
+  margin-right: 15px;
+  margin-bottom: 4px;
+}
+
+main .next-btn-box .next-btn .blue-arrow-icon2 {
+  display: none;
+  width: 8px;
+  margin-top: 2px;
+  margin-right: 15px;
+  margin-bottom: 4px;
+}
+
+main .next-btn-box .next-btn .plus-icon2 {
+  margin-left: 6px;
 }
 
 main .next-btn-box .next-btn:active {
@@ -395,6 +432,14 @@ main .next-btn-box .next-btn:active .blue-arrow-icon {
   display: block;
 }
 
+main .next-btn-box .next-btn:active .arrow-icon2 {
+  display: none;
+}
+
+main .next-btn-box .next-btn:active .blue-arrow-icon2 {
+  display: block;
+}
+
 main .next-btn-box .next-btn:active .blue-text {
   display: block;
 }
@@ -407,9 +452,9 @@ main .more-btn-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   height: 40px;
   margin-bottom: 43px;
   margin-left: 45px;
@@ -507,6 +552,34 @@ main .more-btn-box .next-btn:active .blue-text {
 
 main .more-btn-box .next-btn:active .white-text {
   display: none;
+}
+
+main .table-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  overflow: scroll;
+  margin-right: 55px;
+  margin-left: 45px;
+  margin-bottom: 35px;
+}
+
+main .table-box table {
+  width: 100%;
+  border: 1px #767676 solid;
+  font-family: "Nunito", sans-serif;
+}
+
+main .table-box table td {
+  padding: 5px;
+  border: 1px #767676 solid;
+}
+
+main .table-box table .primeira-td {
+  background-color: lightgrey;
 }
 
 @media (max-width: 450px) {
