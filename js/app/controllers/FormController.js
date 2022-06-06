@@ -175,6 +175,16 @@ class FormController{
                 document.querySelector('#tb-phone').style.OutlineColor = 'blue';
                 validationFailed = true;
             }
+            if(document.querySelector('#tb-age').value == ''){
+            
+                document.querySelector('#tb-age').style.backgroundColor = '#fcdde0'
+                areFieldsEmpty = true;
+
+            }else{
+                document.querySelector('#tb-age').style.backgroundColor = 'white'
+                areFieldsEmpty = false;
+                
+            }
             if(document.querySelector('#cb-terms').checked){
                 areTermsChecked = true;
             }
